@@ -3,31 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
     <title>My Baking Info</title>
 </head>
 <body>
     
-    <div align="center">
-        <h1>Baking Stuff</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Bake Title</th>
-                    <th>Baker's First Name</th>
-                    <th>Baker's Last Name</th>
-                    <th>Bake Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="bake : ${listInfo}">
-                    <td th:text="${bake.title}"></td>
-                    <td th:text="${bake.firstName}"></td>
-                    <td th:text="${bake.lastName}"></td>
-                    <td th:text="${bake.description}"></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</body>
+    <div th:each="bake : ${listInfo}" class="container my-4">
+        
+            <div  class="card">
+                <div  class="card-body">
+                  <h5 th:text="${bake.title}"class="card-title"></h5>
+                  <p th:text="${bake.description}"class="card-text"></p>
+                </div>
+                <img src="..." class="card-img-top" alt="...">
+        </div>
+    
+          </div>
+    </body>
 </html>

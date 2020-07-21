@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "bakes")
 public class Info {
@@ -71,6 +72,16 @@ public class Info {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public Info(Long id, String firstName, String lastName, String title, String description) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.title = title;
+        this.description = description;
+    }
+
+    public Info(){}
 
     
 
