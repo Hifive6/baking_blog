@@ -11,14 +11,14 @@
         <h1>Baking Info</h1>
         <hr>
         <h2>Save New Bake</h2>
-         <form action="# th:action="@{/saveInfo}" th:object="info" method="POST">
+         <form action="#" th:action="@{/saveInfo}" th:object="${info}" method="POST">
             <input type="text" th:field = "*{title}" placeholder="Title your bake">
             <input type="text" th:field = "*{firstName}" placeholder="Baker First Name">
             <input type="text" th:field = "*{lastName}" placeholder="Baker Last Name">
             <input type="text" th:field = "*{description}" placeholder="Give your bake some life">
             <label for="img">Add an Image of your Bake</label>
             <input type="file" id="img" th:field = "*{image}">
-            
+            <button type="submit">Add some Bakes</button>
         </form>
     </div>
 </body>

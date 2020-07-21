@@ -18,7 +18,7 @@
                   <h5 th:text="${bake.title}"class="card-title"></h5>
                   <p th:text="${bake.description}"class="card-text"></p>
                 </div>
-                <img src="..." class="card-img-top" alt="...">
+                <img th:src=${bake.image} class="card-img-top" >
         </div>
     
           </div>

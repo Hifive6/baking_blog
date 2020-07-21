@@ -5,7 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
+
+import org.apache.tomcat.util.codec.binary.Base64;
 
 
 @Entity
@@ -28,8 +31,11 @@ public class Info {
     @Column(name = "description")
     private String description;
 
-    // @Column(name = "image")
-    // private byte image;
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
+
+   
 
     
     public String getFullName(){
@@ -76,23 +82,26 @@ public class Info {
         this.lastName = lastName;
     }
 
-    // public byte getImage() {
-    //     return image;
-    // }
+   
 
-    // public void setImage(byte image) {
-    //     this.image = image;
-    // }
-
-    public Info(Long id, String firstName, String lastName, String title, String description) {
+    public Info(Long id, String firstName, String lastName, String title, String description, byte[] image) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.title = title;
         this.description = description;
+        this.image = image;
     }
 
     public Info(){}
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
 
     
 
