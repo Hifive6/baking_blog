@@ -1,11 +1,14 @@
 package com.bakingcrud.springbootthymeleafcookingapp.controller;
 
+import com.bakingcrud.springbootthymeleafcookingapp.model.Info;
 import com.bakingcrud.springbootthymeleafcookingapp.service.InfoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+// import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class InfoController {
@@ -18,4 +21,13 @@ public class InfoController {
         model.addAttribute("listInfo", infoService.getAllInfo());
         return "index";
     }
+
+    @GetMapping(value="/addInfoForm")
+    public String addInfoForm(Model model) {
+        Info info = new Info();
+        model.addAttribute("info", info);
+        return "new_bake";
+    }
+    
+    
 }

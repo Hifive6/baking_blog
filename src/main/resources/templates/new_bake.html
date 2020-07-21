@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>add something new</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Baking Info</h1>
+        <hr>
+        <h2>Save New Bake</h2>
+         <form action="# th:action="@{/saveInfo}" th:object="info" method="POST">
+            <input type="text" th:field = "*{title}" placeholder="Title your bake">
+            <input type="text" th:field = "*{firstName}" placeholder="Baker First Name">
+            <input type="text" th:field = "*{lastName}" placeholder="Baker Last Name">
+            <input type="text" th:field = "*{description}" placeholder="Give your bake some life">
+            <label for="img">Add an Image of your Bake</label>
+            <input type="file" id="img" th:field = "*{image}">
+            
+        </form>
+    </div>
+</body>
+</html>

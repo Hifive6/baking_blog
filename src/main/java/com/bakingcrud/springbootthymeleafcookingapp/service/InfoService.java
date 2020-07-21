@@ -6,4 +6,5 @@ import com.bakingcrud.springbootthymeleafcookingapp.model.Info;
 
 public interface InfoService {
     List<Info> getAllInfo();
+    void saveInfo(Info info);
 }

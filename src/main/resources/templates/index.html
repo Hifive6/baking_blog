@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
@@ -8,7 +8,9 @@
     <title>My Baking Info</title>
 </head>
 <body>
-    
+    <div class="container my-4" >
+      <a th:href = @{/addInfoForm}>adding you info</a>
+    </div>
     <div th:each="bake : ${listInfo}" class="container my-4">
         
             <div  class="card">

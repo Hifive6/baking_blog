@@ -19,4 +19,10 @@ public class InfoServiceImpl implements InfoService {
         
         return infoRepo.findAll();
     }
+
+    @Override
+    public void saveInfo(Info info) {
+        this.infoRepo.save(info);
+
+    }
 }

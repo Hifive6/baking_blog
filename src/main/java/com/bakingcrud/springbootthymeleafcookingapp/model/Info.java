@@ -28,6 +28,9 @@ public class Info {
     @Column(name = "description")
     private String description;
 
+    // @Column(name = "image")
+    // private byte image;
+
     
     public String getFullName(){
         return getFirstName() + getLastName();
@@ -73,6 +76,14 @@ public class Info {
         this.lastName = lastName;
     }
 
+    // public byte getImage() {
+    //     return image;
+    // }
+
+    // public void setImage(byte image) {
+    //     this.image = image;
+    // }
+
     public Info(Long id, String firstName, String lastName, String title, String description) {
         this.id = id;
         this.firstName = firstName;
@@ -82,6 +93,8 @@ public class Info {
     }
 
     public Info(){}
+
+    
 
     
 
