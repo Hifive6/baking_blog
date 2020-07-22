@@ -1,5 +1,6 @@
 package com.bakingcrud.springbootthymeleafcookingapp.service;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.bakingcrud.springbootthymeleafcookingapp.model.Info;
@@ -29,18 +30,17 @@ public class InfoServiceImpl implements InfoService {
     }
 
     // @Override
-    // public Info storeFile(MultipartFile file){
+    // public Info saveInfo(MultipartFile file) {
     //     String filename = StringUtils.cleanPath(file.getOriginalFilename());
 
     //     try {
-    //         if(filename.contains("...")){
-    //             throw new Exception("Sorry! Filename contains invalid path sequence " + filename);
-    //         }
+           
+    //         Info info = new Info(file.getContentType(), file.getContentType(), file.getContentType(), file.getContentType(),
+    //                 file.getBytes());
 
-    //         Info dbimage = new Info(null, filename, file.getContentType(), filename, filename, file.getBytes());
-    //          return infoRepo.save(dbimage);
+    //          return infoRepo.save(info);
     //     } catch (Exception e) {
-    //         throw new Exception("Could not store file " + filename + " please, try again.")
+    //          "Could not store file " + filename + " please, try again.";
     //     }
     // }
 }

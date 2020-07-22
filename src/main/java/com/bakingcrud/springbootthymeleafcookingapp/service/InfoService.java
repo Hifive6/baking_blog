@@ -9,5 +9,5 @@ import org.springframework.web.multipart.MultipartFile;
 public interface InfoService {
     List<Info> getAllInfo();
     void saveInfo(Info info);
-  
+    // Info saveInfo(MultipartFile file);
 }

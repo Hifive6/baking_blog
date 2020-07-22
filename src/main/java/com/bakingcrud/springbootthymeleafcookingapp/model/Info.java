@@ -8,12 +8,14 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
-import org.apache.tomcat.util.codec.binary.Base64;
+import org.springframework.web.multipart.MultipartFile;
+
+// import org.apache.tomcat.util.codec.binary.Base64;
 
 
 @Entity
 @Table(name = "bakes")
-public class Info {
+public class Info  {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -84,8 +86,8 @@ public class Info {
 
    
 
-    public Info(Long id, String firstName, String lastName, String title, String description, byte[] image) {
-        this.id = id;
+    public Info( String firstName, String lastName, String title, String description, byte[] image) {
+        // this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.title = title;

@@ -12,29 +12,31 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 // import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class InfoController {
-    
+
     @Autowired
     private InfoService infoService;
-    //display list of all info
+
+    // display list of all info
     @GetMapping("/")
-    public String viewHomePage(Model model){
+    public String viewHomePage(Model model) {
         model.addAttribute("listInfo", infoService.getAllInfo());
         return "index";
     }
 
-    @GetMapping(value="/addInfoForm")
+    @GetMapping(value = "/addInfoForm")
     public String addInfoForm(Model model) {
         Info info = new Info();
         model.addAttribute("info", info);
         return "new_bake";
     }
-    
+
     @PostMapping("/saveInfo")
-    public String saveInfo(@ModelAttribute("info") Info info){
+    public String saveInfo(@ModelAttribute("info") Info info) {
+        // infoService.saveInfo((MultipartFile) info);
         infoService.saveInfo(info);
         return "redirect:/";
     }
