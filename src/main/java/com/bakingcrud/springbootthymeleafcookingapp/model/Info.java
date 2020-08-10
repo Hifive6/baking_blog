@@ -5,10 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
+// import javax.persistence.Lob;
 import javax.persistence.Table;
 
-import org.springframework.web.multipart.MultipartFile;
+// import org.apache.tomcat.util.codec.binary.Base64;
+// import org.springframework.web.multipart.MultipartFile;
+// import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 // import org.apache.tomcat.util.codec.binary.Base64;
 
@@ -33,11 +35,18 @@ public class Info  {
     @Column(name = "description")
     private String description;
 
-    @Lob
+    // @Lob
     @Column(name = "image")
     private byte[] image;
 
-   
+    @Column(name = "pictures")
+    private String pic;
+    // @Column(name = "images")
+    // private CommonsMultipartFile[] image;
+
+//    public String generateBase64Image(){
+//        return Base64.encodeBase64String(this.getImage());
+//    }
 
     
     public String getFullName(){
@@ -86,13 +95,14 @@ public class Info  {
 
    
 
-    public Info( String firstName, String lastName, String title, String description, byte[] image) {
+    public Info( String firstName, String lastName, String title, String description, byte[] image, String pic) {
         // this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.title = title;
         this.description = description;
         this.image = image;
+        this.pic = pic;
     }
 
     public Info(){}
@@ -103,6 +113,14 @@ public class Info  {
 
     public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
     
