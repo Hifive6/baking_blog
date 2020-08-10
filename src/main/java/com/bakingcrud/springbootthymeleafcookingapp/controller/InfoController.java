@@ -29,7 +29,7 @@ public class InfoController {
     }
 
     
-    @GetMapping(value = "/addInfoForm")
+    @GetMapping(value = "/OnlyDJKnowsThisRoute")
     public String addInfoForm(Model model) {
         Info info = new Info();
         model.addAttribute("info", info);
