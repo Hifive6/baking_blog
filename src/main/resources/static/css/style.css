@@ -1,19 +1,30 @@
 body{
     background: rgb(40,4,126);
     background: linear-gradient(90deg, rgba(40,4,126,1) 0%, rgba(38,94,186,1) 21%, rgba(0,212,255,1) 81%);
-
+    font-family: 'Lemonada', cursive;
 
 }
 
-.headtag{
-    text-align: center;
+.header{
+    color:#f2d9f2;
+    text-shadow: 2px 2px #b49fe6;
+}
+
+.card-title{
+    color: #3b0776;
+    text-shadow: 2px 2px #b792f2;
 }
 
 .card{
-    background-color: rgb(143, 196, 242);
+    background: rgb(97,210,233);
+    background: linear-gradient(90deg, rgba(97,210,233,1) 8%, rgba(199,213,236,1) 48%, rgba(180,159,230,1) 92%);
 }
 
 .img{
     width: 60%;
-    height: 50%;
+    height: 10%;
+}
+
+p{
+    color: #747474;
 }

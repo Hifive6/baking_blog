@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <title>My Baking Info</title>
 </head>
 <body>
-  <div class="container text-center ">
+  <div class="container text-center header">
       <h2 class="">Welcome to my Page of Baking!!</h2> 
       <!-- <a class="text-warning"th:href = @{/OnlyDJKnowsThisRoute}>add info</a> -->
   </div>
@@ -17,11 +18,9 @@
         
             <div  class="card">
                 <div  class="card-body">
-                  <h5 th:text="${bake.title}"class="card-title"></h5>
-                  <p th:text="${bake.description}"class="card-text"></p>
+                  <h3 th:text="${bake.title}"class="card-title"></h3>
+                  <b><p th:text="${bake.description}"class="card-text"></p>
                 </div>
-                <!-- <img th:src=@{images/65041063-1355-45B6-B5BE-25244BCD4BA7_1_105_c.jpeg} class="card-img-top" > -->
-                <!-- <img th:src=${bake.image} class="card-img-top" > -->
                 <img th:src=${bake.pic} class="card-img-top img rounded mx-auto d-block" >
 
 
